@@ -39,3 +39,7 @@ Thumbs.db
 Dataset/
 resized_images/
 annotation/
+image/
+Lists/
+test_split/
+train_split/
