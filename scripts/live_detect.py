@@ -3,15 +3,29 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.xception import preprocess_input
 import numpy as np
+import os
+
+# Define project root (BASE_DIR)
+# This script is in scripts/BASE_DIR
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_PATH = os.path.join(BASE_DIR, "breed_classifier_xception.h5")
+DATA_DIR = os.path.join(BASE_DIR, "resized_images")
 
 # Load model
-model = load_model("breed_classifier_xception.h5")
+if not os.path.exists(MODEL_PATH):
+    raise FileNotFoundError(f"Model file not found at: {MODEL_PATH}")
+
+model = load_model(MODEL_PATH)
 
 # Recreate class label mapping
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 datagen = ImageDataGenerator(preprocessing_function=preprocess_input, validation_split=0.4)
+
+if not os.path.exists(DATA_DIR):
+    raise FileNotFoundError(f"Data directory not found at: {DATA_DIR}")
+
 train_gen = datagen.flow_from_directory(
-    "resized_images",
+    DATA_DIR,
     target_size=(299, 299),
     batch_size=32,
     class_mode='categorical',
