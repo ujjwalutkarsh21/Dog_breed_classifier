@@ -35,7 +35,7 @@ wheels/
 Thumbs.db
 
 # Large data files (optional - uncomment if needed)
-# *.h5
-# Dataset/
-# resized_images/
-# annotation/
+*.h5
+Dataset/
+resized_images/
+annotation/

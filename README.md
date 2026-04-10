@@ -3,6 +3,7 @@
 A deep learning project to classify dog breeds using XceptionNet architecture. This model can identify dog breeds from images with high accuracy.
 
 ## 📋 Table of Contents
+
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
@@ -59,18 +60,21 @@ Dog_breed_classifier/
 ## 📥 Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/ujjwalutkarsh21/Dog_breed_classifier.git
 cd Dog_breed_classifier
 ```
 
 2. **Create a virtual environment (recommended)**
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -78,26 +82,31 @@ pip install -r requirements.txt
 ## 🚀 Usage
 
 ### Using the Main Application
+
 ```bash
 python Code.py
 ```
 
 ### Real-time Detection from Webcam
+
 ```bash
 python scripts/live_detect.py
 ```
 
 ### Train the Model
+
 ```bash
 python scripts/train_model.py
 ```
 
 ### Evaluate the Model
+
 ```bash
 python scripts/evaluate_model.py
 ```
 
 ### Process Images
+
 ```bash
 # Resize images
 python scripts/resize_images.py
@@ -118,7 +127,9 @@ python scripts/split_data.py
 - **Output**: Breed classification with confidence scores
 
 ### Model Performance
+
 The model achieves high accuracy on the dog breed classification task through:
+
 - Deep convolutional neural networks
 - Data augmentation
 - Transfer learning from ImageNet
@@ -127,12 +138,14 @@ The model achieves high accuracy on the dog breed classification task through:
 ## 📊 Dataset
 
 The project uses a comprehensive dog breed dataset with:
+
 - Multiple images per breed for robust training
 - Organized by breed in annotation folders
 - Preprocessed and resized for optimal performance
 - Split into training and testing sets
 
 ### Dataset Structure
+
 ```
 annotation/
 ├── n02085620-Chihuahua/
@@ -143,20 +156,21 @@ annotation/
 
 ## 📝 Scripts
 
-| Script | Purpose |
-|--------|---------|
-| `train_model.py` | Train the XceptionNet model on dog breed dataset |
-| `evaluate_model.py` | Evaluate model performance on test set |
-| `live_detect.py` | Real-time breed detection from webcam |
-| `resize_images.py` | Resize images to model input dimensions (299x299) |
-| `normalize_images.py` | Normalize image pixel values |
-| `split_data.py` | Split dataset into training and testing subsets |
-| `data_generator.py` | Generate augmented data for training |
-| `check_model.py` | Validate model architecture and weights |
+| Script                | Purpose                                           |
+| --------------------- | ------------------------------------------------- |
+| `train_model.py`      | Train the XceptionNet model on dog breed dataset  |
+| `evaluate_model.py`   | Evaluate model performance on test set            |
+| `live_detect.py`      | Real-time breed detection from webcam             |
+| `resize_images.py`    | Resize images to model input dimensions (299x299) |
+| `normalize_images.py` | Normalize image pixel values                      |
+| `split_data.py`       | Split dataset into training and testing subsets   |
+| `data_generator.py`   | Generate augmented data for training              |
+| `check_model.py`      | Validate model architecture and weights           |
 
 ## 📈 Results
 
 The trained model provides:
+
 - **Accuracy**: High classification accuracy on diverse dog breed images
 - **Speed**: Real-time inference capability
 - **Robustness**: Works with various image qualities and lighting conditions
@@ -178,6 +192,7 @@ This project is open source and available under the MIT License.
 ## 👤 Author
 
 **Ujjwal Lutkarsh**
+
 - GitHub: [@ujjwalutkarsh21](https://github.com/ujjwalutkarsh21)
 
 ## 🤝 Contributing
